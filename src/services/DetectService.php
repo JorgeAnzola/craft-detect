@@ -40,4 +40,19 @@ class DetectService extends Component
 	{
 		return $this->getMobileDetect()->{$service}($args);
 	}
+
+	public function device()
+	{
+		$mobileDetect = $this->getMobileDetect();
+
+		if ($mobileDetect->isMobile() && ! $mobileDetect->isTablet()) {
+			$device = 'mobile';
+		} elseif ($mobileDetect->isTablet()) {
+			$device = 'tablet';
+		} else {
+			$device = 'desktop';
+		}
+
+		return $device;
+	}
 }

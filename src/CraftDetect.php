@@ -68,7 +68,7 @@ class CraftDetect extends Plugin
             function (Event $event) {
                 /** @var CraftVariable $variable */
                 $variable = $event->sender;
-                $variable->set('craftDetect', CraftDetectVariable::class);
+                $variable->set('detect', CraftDetectVariable::class);
             }
         );
 

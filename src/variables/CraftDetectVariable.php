@@ -33,4 +33,12 @@ class CraftDetectVariable
 	{
 		return CraftDetect::getInstance()->detectService->get($variable, $args);
 	}
+
+	/**
+	 * @return mixed
+	 */
+	public function device()
+	{
+		return CraftDetect::getInstance()->detectService->device();
+	}
 }
