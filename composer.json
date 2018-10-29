@@ -1,0 +1,44 @@
+{
+    "name": "jorgeanzola/craft-detect",
+    "description": "Mobile_Detect library implementation for Craft 3.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft detect"
+    ],
+    "support": {
+        "docs": "https://github.com/jorgeanzola/craft-detect/blob/master/README.md",
+        "issues": "https://github.com/jorgeanzola/craft-detect/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jorge Anzola",
+            "homepage": "github.com/jorgeanzola"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "mobiledetect/mobiledetectlib": "^2.8"
+    },
+    "autoload": {
+        "psr-4": {
+          "jorgeanzola\\craftdetect\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft detect",
+        "handle": "craft-detect",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/jorgeanzola/craft-detect/master/CHANGELOG.md",
+        "components": {
+            "detectService": "jorgeanzola\\craftdetect\\services\\DetectService"
+        },
+        "class": "jorgeanzola\\craftdetect\\CraftDetect"
+    }
+}
